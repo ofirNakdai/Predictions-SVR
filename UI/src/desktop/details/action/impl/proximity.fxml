@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="desktop.details.action.impl.ProximityController">
+   <children>
+      <Label text="Proximity" />
+      <Separator />
+      <HBox spacing="10.0">
+         <children>
+            <VBox>
+               <children>
+                  <Label text="Source Entity" />
+                  <Label text="Target Entity" />
+                  <Label text="Secondary Entity" />
+                  <Label text="Depth of" />
+                  <Label text="Number of actions" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label fx:id="mainEntLabel" text="Label" />
+                  <Label fx:id="targetLabel" text="Label" />
+                  <Label fx:id="secEntLabel" text="Label" />
+                  <Label fx:id="ofLabel" text="Label" />
+                  <Label fx:id="thenLabel" text="Label" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

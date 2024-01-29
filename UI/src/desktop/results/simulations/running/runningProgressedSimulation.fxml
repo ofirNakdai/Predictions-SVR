@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane hgap="4.0" prefHeight="350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="desktop.results.simulations.running.RunningSimulationController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="NEVER" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="160.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="223.0" prefWidth="223.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" prefWidth="182.0" />
+    <ColumnConstraints hgrow="NEVER" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="NEVER" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="NEVER" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="entityTableView" prefHeight="99.0" prefWidth="300.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+        <columns>
+          <TableColumn fx:id="entityColumn" prefWidth="87.0" resizable="false" sortable="false" text="Entity" />
+          <TableColumn fx:id="entityCountAtBegColumn" prefWidth="75.0" resizable="false" sortable="false" text="Beginning" />
+            <TableColumn fx:id="entityCountAtEndColumn" prefWidth="59.0" resizable="false" sortable="false" text="End" />
+        </columns>
+      </TableView>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="110.0" spacing="5.0">
+               <children>
+                  <Label text="Status:" />
+                  <Label text="Current tick:" />
+                  <Label text="Running time:" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <Label fx:id="statusLBL" text="Status details" />
+                  <Label fx:id="tickLBL" text="Current tick" />
+                  <Label fx:id="timeLBL" text="Running time" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2">
+         <children>
+            <HBox fx:id="ticksProgressHBox" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label text="ticks" />
+                  <ProgressBar fx:id="ticksProgressBar" prefHeight="18.0" prefWidth="220.0" progress="0.0" />
+                  <Label fx:id="ticksPercentLBL" text="\%" />
+               </children>
+            </HBox>
+            <HBox fx:id="timeProgressHBox" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label minWidth="45.0" text="seconds" />
+                  <ProgressBar fx:id="timeProgressBar" prefHeight="18.0" prefWidth="220.0" progress="0.0" />
+                  <Label fx:id="timePercentLBL" minWidth="25.0" text="\%" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </VBox>
+      <Label fx:id="errorLBL" text="Error Lable" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+        <buttons>
+          <Button fx:id="pauseBTN" mnemonicParsing="false" onAction="#pauseButtonPressed" text="pause" />
+            <Button fx:id="resumeBTN" mnemonicParsing="false" onAction="#resumeButtonPressed" text="resume" />
+            <Button fx:id="stopBTN" mnemonicParsing="false" onAction="#stopButtonPressed" text="stop" />
+        </buttons>
+      </ButtonBar>
+      <TableView fx:id="envVarsTableView" minWidth="182.0" prefHeight="200.0" prefWidth="182.0" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="2">
+        <columns>
+          <TableColumn fx:id="envVarNameCol" minWidth="90.0" prefWidth="90.0" text="Name" />
+          <TableColumn fx:id="envVarValueCol" minWidth="90.0" prefWidth="90.0" text="value" />
+        </columns>
+      </TableView>
+      <Label text="Enviriment Variables:" GridPane.columnIndex="3" />
+   </children>
+</GridPane>

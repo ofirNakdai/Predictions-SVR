@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="desktop.details.action.impl.CalculationController">
+   <children>
+      <Label fx:id="calcTypeLabel" text="Label" />
+      <Separator />
+      <HBox spacing="10.0">
+         <children>
+            <VBox>
+               <children>
+                  <Label text="Main Entity" />
+                  <Label text="Secondary Entity" />
+                  <Label text="Result Property" />
+                  <Label text="Argument 1" />
+                  <Label text="Argument 2" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label fx:id="mainEntLabel" text="Label" />
+                  <Label fx:id="secEntLabel" text="Label" />
+                  <Label fx:id="resPropLabel" text="Label" />
+                  <Label fx:id="arg1Label" text="Label" />
+                  <Label fx:id="arg2Label" text="Label" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

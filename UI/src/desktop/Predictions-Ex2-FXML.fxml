@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<ScrollPane fx:id="scrollPane" prefHeight="600.0" prefWidth="800.0" styleClass="back" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="desktop.AppController">
+   <content>
+      <BorderPane prefHeight="598.0" prefWidth="798.0">
+         <center>
+            <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab fx:id="detailsTab" styleClass="tabButton" text="Details">
+                     <content>
+                        <fx:include fx:id="detailsComponent" source="details/details.fxml" />
+                     </content>
+                  </Tab>
+                <Tab fx:id="newExecutionTab" styleClass="tabButton" text="New Execution">
+                     <content>
+                        <fx:include fx:id="executionComponent" source="execution/execution.fxml" />
+                     </content></Tab>
+                  <Tab fx:id="resultsTab" styleClass="tabButton" text="Results">
+                     <content>
+                        <fx:include fx:id="resultsComponent" source="results/results.fxml" />
+                     </content>
+                  </Tab>
+              </tabs>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TabPane>
+         </center>
+         <top>
+            <fx:include fx:id="headerComponent" source="header/header.fxml" />
+         </top>
+      </BorderPane>
+   </content>
+</ScrollPane>

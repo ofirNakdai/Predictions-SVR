@@ -1,0 +1,105 @@
+/* Define a basic style for the application's root container */
+
+.root {
+    -fx-font-family: Arial, sans-serif; /* Set the font family */
+}
+.text{
+    -fx-font-family: "Lucida Sans Unicode";
+    -fx-font-size: 12px;
+}
+
+
+
+/* Define a style for buttons */
+.button {
+    -fx-background-color: #db344d; /* Set the background color */
+    -fx-text-fill: black; /* Set the text color */
+    -fx-font-size: 14px; /* Set the font size */
+    -fx-padding: 8px 16px; /* Set the padding */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 5, 0, 0, 1); /* Add drop shadow effect */
+    -fx-transition: background-color 0.3s; /* Add a transition for the background color change */
+}
+.tabButton:top{
+    -fx-background-color: #db344d; /* Set the background color */
+    -fx-text-fill: black; /* Set the text color */
+    -fx-font-size: 14px; /* Set the font size */
+}
+
+/* Add a hover effect */
+.button:hover, .tabButton:top {
+    -fx-background-color: #dc5369; /* Change the background color on hover */
+}
+
+
+.table-view {
+    -fx-font-size: 14px; /* Set the font size for table view */
+    -fx-background-color: rgba(167, 167, 173, 0.85);
+}
+
+.label {
+    -fx-font-size: 12px; /* Set the font size */
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+/* Define styles for TableView headers */
+.table-view .column-header-background {
+    -fx-background-color: Black;
+    -fx-text-fill: black; /* Set the header text color */
+    -fx-font-weight: bold; /* Make the header text bold */
+}
+    /* Define a style for labels */
+
+
+.list-view {
+    -fx-font-size: 12px; /* Set the font size for list view items */
+    -fx-background-color: rgba(167, 167, 173, 0.85);
+    -fx-text-fill: white
+}
+
+/* Define a style for text fields */
+.text-field {
+    -fx-font-size: 14px; /* Set the font size */
+    -fx-padding: 5px; /* Set the padding */
+    -fx-border-color: #ccc; /* Set the border color */
+    -fx-border-width: 1px; /* Set the border width */
+}
+
+/* Define a style for text areas */
+.text-area {
+    -fx-background-color: rgba(167, 167, 173, 0.85);
+    -fx-font-size: 14px; /* Set the font size */
+    -fx-padding: 5px; /* Set the padding */
+    -fx-border-color: #ccc; /* Set the border color */
+    -fx-border-width: 1px; /* Set the border width */
+}
+
+/* Define a style for the main application title */
+#title {
+    -fx-font-size: 24px; /* Set the font size */
+    -fx-font-weight: bold; /* Set the font weight */
+}
+
+/* Define styles for BarChart */
+.bar-chart, .line-chart, .chart-legend{
+    -fx-background-color: rgba(239, 170, 219, 0.85); /* Set the background color for bar chart */
+    -fx-font-size: 14px; /* Set the font size for axis labels, etc. */
+}
+
+.back{
+    -fx-background-color: rgba(239, 170, 219, 0.85);
+}
+
+#headerTextField{
+    -fx-background-color: rgba(232, 111, 190, 0.85);
+    -fx-text-fill: white
+}
+
+.componentBack, .scroll-pane{
+    -fx-background-color: rgba(167, 167, 173, 0.85);
+    -fx-text-fill: white
+}
+
+#animationsCB{
+    -fx-text-fill: black;
+}
